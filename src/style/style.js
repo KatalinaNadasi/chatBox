@@ -26,8 +26,3 @@ export const Box = styled.div `
 export const Form = styled.form `
     padding: 2rem;
 `
-
-export const Input = styled.input `
-    width: 75%;
-    margin-right: 0.4rem;
-`
