@@ -22,7 +22,3 @@ export const Box = styled.div `
     display: inline-block;
     text-align: left;
 `
-
-export const Form = styled.form `
-    padding: 2rem;
-`

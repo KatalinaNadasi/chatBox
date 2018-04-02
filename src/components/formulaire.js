@@ -1,14 +1,18 @@
 import React from 'react';
-import {Box, Form} from '../style/style';
+import {Box} from '../style/style';
 import Message from './message';
 
 class Formulaire extends React.Component {
 
     displayMessage = event => {
       event.preventDefault();
-      let message = this.message.value;
-      console.log({message})
+      const message = this.message.value;
+      // catch props from the parent
+      this.props.addMessage(message);
+      // reset
+      this.messageForm.reset();
     }
+
   render() {
 
     const title = this.props.chat1 ? 'Chat A' : 'Chat B';
@@ -21,8 +25,11 @@ class Formulaire extends React.Component {
 
 
     return(
-      <Box onSubmit={e => this.displayMessage(e)}>
-        <Form>
+      <Box>
+        <form
+            onSubmit={e => this.displayMessage(e)}
+            ref={input => this.messageForm = input}
+        >
           <h2>{title}</h2>
           <Message />
           <div>
@@ -33,7 +40,7 @@ class Formulaire extends React.Component {
             />
             <button style={border} type="submit" >OK</button>
           </div>
-        </Form>
+        </form>
       </Box>
     )
   }
