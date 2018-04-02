@@ -10,7 +10,6 @@ class Message extends React.Component {
       <React.Fragment>
         <textarea style={border} name="message" cols="30" rows="10" required maxLength='140' >
         </textarea>
-        <p>Yo</p>
       </React.Fragment>
     )
   }

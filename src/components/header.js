@@ -1,5 +1,5 @@
 import React from 'react';
-import {Wrapper, Title, Container} from '../style/style';
+import {Wrapper, Title} from '../style/style';
 
 
 class Header extends React.Component {
